@@ -1,0 +1,28 @@
+title: Vanillia Passion (By Absolut)
+image:
+  uri: https://cdn.dylangriffith.net/e80741c4-bd55-4478-9193-7ea6915e81ce.jpg
+description: This is a very sweet fruity (yet strong) cocktail. I got the recipe from (the Absolut website)[http://www.absolutdrinks.com/en/drinks/vanilia-passion/] but changed it slightly.
+ingredients:
+  -
+    name: Vodka
+    amount: 60ml
+  -
+    name: Amaretto
+    amount: 20ml
+  -
+    name: Apple Juice
+    amount: 30ml
+  -
+    name: Lemon Juice
+    amount: 30ml
+  -
+    name: Sugar Syrup
+    amount: 15ml
+  -
+    name: Passionfruit Pulp
+    amount: 3tsp
+  -
+    name: Vanilla Essence
+    amount: 1tsp
+method: Fill a shaker with ice then add all the ingredients. Shake thoroughly and strain into a chilled martini glass.
+notes: The original recipe had Dry Vermouth but I swapped it for Amaretto which gives it a sweet almondy flavour.
