@@ -14,7 +14,8 @@ defmodule CocktailsIo.Mixfile do
   #
   # Type "mix help compile.app" for more information
   def application do
-    [applications: [:logger],
+    [applications: [:logger, :cowboy, :plug],
+     included_applications: [:eex],
      mod: {CocktailsIo, []}]
   end
 
@@ -28,6 +29,10 @@ defmodule CocktailsIo.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    []
+    [
+      {:cowboy, "~> 1.0"},
+      {:plug, "~> 1.0"},
+      {:exrm, "~> 0.19"},
+    ]
   end
 end
