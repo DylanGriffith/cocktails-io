@@ -1,0 +1,18 @@
+#!/usr/bin/env ruby
+
+require 'yaml'
+
+data = YAML.load_file(ARGV.shift)
+
+puts <<END
+*#{data["title"]}*
+#{data["description"]}
+
+*Ingredients*
+#{data["ingredients"].map { |i| "- #{i["amount"]} #{i["name"]}" }.join("\n")}
+
+*Method*
+#{data["method"]}
+
+#{data["notes"]}
+END
