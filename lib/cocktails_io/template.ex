@@ -1,4 +1,9 @@
 defmodule CocktailsIo.Template do
-  require EEx
-  EEx.function_from_file :def, :index, "./lib/cocktails_io/templates/index.html.eex", []
+  use Calliope.Engine, layout: "application", path: "./lib/cocktails_io/"
+
+  @index_file "./lib/cocktails_io/templates/index.html.haml"
+
+  def index do
+    content_with_layout(:index, [title: Calliope])
+  end
 end

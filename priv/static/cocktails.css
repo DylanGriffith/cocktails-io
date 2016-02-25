@@ -1,0 +1,24 @@
+#view-source {
+  position: fixed;
+  display: block;
+  right: 0;
+  bottom: 0;
+  margin-right: 40px;
+  margin-bottom: 40px;
+  z-index: 900;
+}
+
+.demo-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 200px;
+  width: 100%;
+  background: url('https://cdn.dylangriffith.net/8714ae73-b5e5-461e-b888-e464348ba782.jpg') center / cover;
+}
+
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+
+.mdl-card.cocktail {
+  width: 100%;
+}

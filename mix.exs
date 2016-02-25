@@ -15,7 +15,7 @@ defmodule CocktailsIo.Mixfile do
   # Type "mix help compile.app" for more information
   def application do
     [applications: [:logger, :cowboy, :plug],
-     included_applications: [:eex],
+     included_applications: [:calliope],
      mod: {CocktailsIo, []}]
   end
 
@@ -30,9 +30,12 @@ defmodule CocktailsIo.Mixfile do
   # Type "mix help deps" for more examples and options
   defp deps do
     [
+      {:calliope, "~> 0.3.0"},
       {:cowboy, "~> 1.0"},
       {:plug, "~> 1.0"},
       {:exrm, "~> 0.19"},
+      { :yaml_elixir, "~> 1.0.0" },
+      { :yamerl, github: "yakaz/yamerl" },
     ]
   end
 end
