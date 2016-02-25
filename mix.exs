@@ -34,8 +34,9 @@ defmodule CocktailsIo.Mixfile do
       {:cowboy, "~> 1.0"},
       {:plug, "~> 1.0"},
       {:exrm, "~> 0.19"},
-      { :yaml_elixir, "~> 1.0.0" },
-      { :yamerl, github: "yakaz/yamerl" },
+      {:poison, "~> 2.0"},
+      {:yaml_elixir, "~> 1.0.0"},
+      {:yamerl, github: "yakaz/yamerl"},
     ]
   end
 end

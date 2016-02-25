@@ -5,6 +5,8 @@ defmodule CocktailsIo.Router do
   plug :match
   plug :dispatch
 
+  forward "/api", to: CocktailsIo.ApiRouter, plug_specific_option: true
+
   def start_link do
     Plug.Adapters.Cowboy.http __MODULE__, [], [port: 8765]
   end
