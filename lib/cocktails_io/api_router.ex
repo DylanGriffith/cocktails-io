@@ -13,6 +13,13 @@ defmodule CocktailsIo.ApiRouter do
     send_resp(conn, 200, Poison.encode!(data))
   end
 
+  get "/cocktails" do
+    cocktails = CocktailsIo.CocktailRepo.load_all
+
+    data = %{data: cocktails}
+    send_resp(conn, 200, Poison.encode!(data))
+  end
+
   match _ do
     send_resp(conn, 404, "{}")
   end
