@@ -15,7 +15,7 @@ defmodule CocktailsIo.Mixfile do
   # Type "mix help compile.app" for more information
   def application do
     [applications: [:logger, :cowboy, :plug, :yaml_elixir],
-     included_applications: [:calliope, :yamerl],
+     included_applications: [:calliope, :poison, :eex],
      mod: {CocktailsIo, []}]
   end
 

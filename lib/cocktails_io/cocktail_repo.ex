@@ -1,8 +1,9 @@
 defmodule CocktailsIo.CocktailRepo do
+  @files files = Path.wildcard("./recipes/*.yml") |> Enum.map(&Path.expand/1) |> Enum.map(fn(f) -> {f, elem(File.read(f), 1)} end)
+
   def load_all do
-    files = Path.wildcard("./recipes/*.yml") |> Enum.map(&Path.expand/1)
-    files |> Enum.map(fn(f) ->
-      {f, YamlElixir.read_from_file(f)}
+    @files |> Enum.map(fn({f, data}) ->
+      {f, YamlElixir.read_from_string(data)}
     end) |> Enum.map(fn({f, c}) ->
       Map.put(c, :id, file_path_to_id(f))
     end)
