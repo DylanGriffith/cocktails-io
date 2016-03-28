@@ -1,0 +1,1 @@
+ssh cocktailsio@riptor 'cd cocktails-io && git pull && mix clean && mix release && rel/cocktails_io/bin/cocktails_io restart'
